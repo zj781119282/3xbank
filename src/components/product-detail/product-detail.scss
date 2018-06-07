@@ -1,0 +1,41 @@
+@import "theme";
+@import "mixin";
+
+.detail-container {
+  padding: .4rem;
+  .product-nav {
+    padding: 0 .3rem;
+    border-bottom: 1px solid $deep-black-background;
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      li {
+        position: relative;
+        float: left;
+        padding: .1rem .32rem;
+        top: 1px;
+        border: 1px solid #fff;
+        border-bottom-color: $deep-black-background;
+        font-size: .24rem;
+        cursor: pointer;
+        &.active {
+          border-color: $deep-black-background;
+          border-bottom-color: #fff;
+          color: $theme-color;
+        }
+        &:hover {
+          color: $theme-color;
+        }
+      }
+    }
+  }
+  .nav-content {
+    padding-top: .4rem;
+    img {
+      width: 100%;
+    }
+    .product-function {
+      display: none;
+    }
+  }
+}

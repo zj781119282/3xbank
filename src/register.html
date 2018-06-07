@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<body>
+<div class="wrapper">
+  ${require('./components/header/header.html')}
+
+  <div class="content">
+    <section class="register-wrapper">
+      <h1 class="i18n" data-i18n="login.title"></h1>
+      <input type="text" id="register_account" class="register-input"/>
+      <input type="text" id="register_captcha" class="register-input"/>
+      <input type="text" id="register_ems" class="register-input"/>
+      <input type="password" id="register_password" class="register-input"/>
+      <input type="password" id="register_repassword" class="register-input"/>
+      <p class="error-block hidden"></p>
+      <a href="javascript:;" class="i18n register-button" data-i18n="register.register"></a>
+      <span class="i18n" data-i18n="register.had_account"></span>
+      <a href="login.html" class="account-redirect i18n" data-i18n="register.login"></a>
+    </section>
+
+    ${require('./components/footer/footer.html')}
+  </div>
+</div>
+</body>
+</html>

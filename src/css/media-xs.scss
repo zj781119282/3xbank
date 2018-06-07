@@ -1,0 +1,52 @@
+@import "mixin";
+@import "theme";
+
+/* 小屏幕样式 */
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: calc(1000vw / 75);
+    line-height: 1;
+  }
+
+  .col-xs-1 { width: 8.333333%; }.col-xs-2 { width: 16.666667% }.col-xs-3 { width: 25% }.col-xs-4 { width: 33.333333% }.col-xs-5 { width: 41.666667% }.col-xs-6 { width: 50% }
+  .col-xs-7 { width: 58.333333%; }.col-xs-8 { width: 66.666667% }.col-xs-9 { width: 75% }.col-xs-10 { width: 83.333333% }.col-xs-11 { width: 91.666667% }.col-xs-12 { width: 100% }
+
+  .hide-xs {
+    display: none;
+  }
+
+  .visible-xs {
+    display: block;
+  }
+
+  .visible-xs-inline {
+    display: inline;
+  }
+
+  .visible-xs-inbl {
+    display: inline-block;
+  }
+
+  .text-right-xs {
+    text-align: right;
+  }
+
+  .text-left-xs {
+    text-align: left;
+  }
+
+  .text-center-xs {
+    text-align: center;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    height: calc(100vh - .88rem);
+    flex: 1;
+    overflow-y: auto;
+  }
+}

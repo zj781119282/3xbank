@@ -1,0 +1,77 @@
+@import "theme";
+@import "mixin";
+
+footer {
+  background-color: $deep-black-background;
+  * {
+    font-size: .24rem;
+    color: #fff;
+  }
+  .email-color {
+    color: $theme-color;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  footer {
+    padding-top: 60px;
+    padding-bottom: 40px;
+
+    .container {
+      display: flex;
+      justify-content: center;
+      .logo {
+        display: block;
+        margin-right: 10%;
+      }
+      .links {
+        a {
+          display: block;
+          &:hover, &:active {
+            color: $theme-color;
+          }
+          &:not(:first-child) {
+            padding-top: 20%;
+          }
+        }
+      }
+      .contact {
+        margin-left: 30px;
+        p {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    padding: .2rem 0;
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      .links {
+        padding: .2rem .2rem .4rem;
+        border-bottom: 1px solid $grey-border;
+        a {
+          padding: 0 .2rem;
+          font-size: .12rem;
+          &:not(:last-child) {
+            border-right: 1px solid #fff;
+          }
+        }
+      }
+
+      .contact {
+        padding: .2rem 0;
+        span, a {
+          font-size: .12rem;
+        }
+      }
+    }
+  }
+}

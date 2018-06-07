@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<body>
+<div class="wrapper">
+  ${require('./components/header/header.html')}
+
+  <div class="content">
+    <section class="purchase-preview clearfix">
+      ${require('./components/product-preview/product-preview.html')}
+      ${require('./components/purchase/purchase.html')}
+    </section>
+
+    <section class="details">
+      ${require('./components/product-detail/product-detail.html')}
+    </section>
+
+    ${require('./components/footer/footer.html')}
+  </div>
+</div>
+</body>
+</html>

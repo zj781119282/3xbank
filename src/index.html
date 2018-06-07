@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<body>
+<div class="wrapper">
+  ${require('./components/header/header.html')}
+
+  <div class="content">
+    ${require('./components/banner/banner.html')}
+
+    <section class="index-section index-cryption">
+      <div class="block-container clearfix">
+        <article class="text-right-lg text-center-xs">
+          <h2 class="i18n" data-i18n="index.cryption_title"></h2>
+          <p class="i18n" data-i18n="index.cryption_desc1"></p>
+          <p class="i18n" data-i18n="index.cryption_desc2"></p>
+        </article>
+        <div class="image-container">
+          <img src="./assets/index/index-cryption.png" alt=""/>
+        </div>
+      </div>
+    </section>
+
+    ${require('./components/footer/footer.html')}
+  </div>
+</div>
+</body>
+</html>
