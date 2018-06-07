@@ -20,10 +20,7 @@ module.exports = {
   context: __dirname,
   entry: {
     index: ['./../src/js/index.js'],
-    product: ['./../src/js/product.js'],
-    login: ['./../src/js/login.js'],
-    register: ['./../src/js/register.js'],
-    forget_password: ['./../src/js/forget_password.js'],
+    'mobile-index': ['./../src/js/mobile-index.js'],
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
@@ -37,8 +34,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      i18n: path.resolve(__dirname, '../src/i18n/'),
       comp: path.resolve(__dirname, '../src/components/'),
+      css: path.resolve(__dirname, '../src/css'),
     },
   },
   plugins: [
@@ -57,8 +54,8 @@ module.exports = {
     }),
     new CommonsChunkPlugin({
       name: 'common',
-      chunks: ['index', 'product', 'login', 'register', 'forget_password'],
-      minChunks: 5, // 提取所有chunks共同依赖的模块
+      chunks: ['index', 'mobile-index'],
+      minChunks: 2, // 提取所有chunks共同依赖的模块
     }),
     new ExtractTextPlugin('css/[name].css?[contenthash:8]', {
       // allChunks: true
@@ -69,24 +66,9 @@ module.exports = {
       chunks: ['common', 'index'],
     }),
     new HtmlWebpackPlugin({
-      filename: 'product.html',
-      template: './../src/product.html',
-      chunks: ['common', 'product'],
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'login.html',
-      template: './../src/login.html',
-      chunks: ['common', 'login'],
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'register.html',
-      template: './../src/register.html',
-      chunks: ['common', 'register'],
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'forget_password.html',
-      template: './../src/forget_password.html',
-      chunks: ['common', 'forget_password'],
+      filename: 'mobile-index.html',
+      template: './../src/mobile-index.html',
+      chunks: ['common', 'mobile-index'],
     }),
   ],
   module: {

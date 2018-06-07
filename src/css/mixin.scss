@@ -12,10 +12,10 @@
 }
 
 /* 背景图标 */
-@mixin icon-custom($url, $left, $right, $scaleX, $scaleY) {
+@mixin icon-custom($url, $left, $top, $scaleX, $scaleY) {
   background-image: url($url);
   background-repeat: no-repeat;
-  background-position: $left $right;
+  background-position: $left $top;
   background-size: $scaleX, $scaleY;
 }
 

@@ -1,58 +1,31 @@
-@import "./theme";
 @import "./mixin";
 
-.index-section {
-  .block-container {
+.wrapper {
+  min-width: 1200px;
+
+  section {
+    width: 100%;
+  }
+
+  .banner {
     position: relative;
-    article {
-      h2 {
-        margin-bottom: .4rem;
-        letter-spacing: .04rem;
-        font-size: .48rem;
-        font-weight: bolder;
-      }
-      p {
-        margin-top: .2rem;
-        letter-spacing: .02rem;
-        font-size: .32rem;
-      }
+    a {
+      position: absolute;
+      left: 0;
+      top: 0;
+      @include wh(100%, 100%);
     }
   }
-}
 
-@media only screen and (max-width: 768px) {
-  .index-section {
-    .block-container {
-      padding: .4rem .2rem;
-      article {
-        margin: .4rem 0;
-      }
-      .image-container {
-        img {
-          width: 100%;
-        }
-      }
-    }
+  .features {
+    margin-top: 62px;
   }
-}
 
-@media only screen and (min-width: 769px) {
-  .index-section {
-    .block-container {
-      padding: 5% 10%;
-      article {
-        width: 50%;
-        float: left;
-        margin-top: 5%;
-        padding: 5%;
-      }
-      .image-container {
-        width: 50%;
-        float: left;
-        img {
-          width: 100%;
-        }
-      }
-    }
+  #about {
+    margin-top: 48px;
+  }
+
+  footer {
+    margin-top: 59px;
   }
 }
