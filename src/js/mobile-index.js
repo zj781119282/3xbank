@@ -1,3 +1,5 @@
-/**
- * Created by Administrator on 2018/6/7 0007.
- */
+import './common'
+
+import 'css/mobile-index.scss'
+
+import 'comp/mobile-header/mobile-header'

@@ -16,7 +16,7 @@
   "private": true,
   "homepage": "",
   "dependencies": {
-
+    "jquery": "^3.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^8.2.0",

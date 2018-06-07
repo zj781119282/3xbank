@@ -1,0 +1,64 @@
+@import "./../../css/mixin";
+
+header {
+  height: .67rem;
+  background-color: #000;
+
+  .container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin: 0 .2rem;
+
+    .logo {
+      @include wh(.54rem, .19rem);
+    }
+
+    .button {
+      line-height: .43rem;
+      text-align: center;
+      border-radius: .2rem;
+      background-color: #4c4c4c;
+      @include wh(.98rem, .43rem);
+    }
+
+    .header-button {
+      margin-left: .25rem;
+      @include wh(.24rem, .24rem);
+      &.close {
+        @include icon-normal('./assets/nav.png');
+      }
+      &.open {
+        @include icon-normal('./assets/x.png');
+      }
+    }
+  }
+
+  .nav-list {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: .67rem;
+    overflow: hidden;
+    transition: all .2s ease;
+    z-index: 99;
+
+    li {
+      padding: .22rem 0 .2rem;
+      border-bottom: .02rem solid #595959;
+      text-align: center;
+      &:first-of-type {
+        border-top: .02rem solid #595959;
+      }
+      a {
+        font-size: .14rem;
+      }
+    }
+
+    &.open {
+      height: calc(100vh - .67rem);
+      background-color: #000;
+    }
+  }
+}

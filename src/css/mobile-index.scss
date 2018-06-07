@@ -1,0 +1,38 @@
+@import "./mixin";
+
+html {
+  font-size: calc(10000vw / 361);
+
+  * {
+    font-size: .16rem;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    .content {
+      flex: 1;
+      overflow-y: auto;
+
+      section:not(:first-of-type) {
+        margin-top: .45rem;
+      }
+
+      .banner {
+        position: relative;
+        a {
+          position: absolute;
+          left: 0;
+          top: 0;
+          @include wh(100%, 100%);
+        }
+      }
+
+      footer {
+        margin-top: .45rem;
+      }
+    }
+  }
+}
